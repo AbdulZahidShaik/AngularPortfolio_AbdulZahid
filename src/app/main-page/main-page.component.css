@@ -1,0 +1,26 @@
+.image-container {
+    position: relative; /* Required for positioning the pseudo-elements */
+    overflow: hidden; /* Prevents pseudo-elements from overflowing the container */
+  }
+  
+  .image-container::before,
+  .image-container::after {
+    content: '';
+    position: absolute;
+    width: 50px;  /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    background-color: rgba(255, 0, 0, 0.5); /* Example: semi-transparent red */
+    border-radius: 50%; /* Example: circles */
+    z-index: -1; /* Place behind the image */
+  }
+  
+  .image-container::before {
+    top: -20px;
+    left: -20px;
+  }
+  
+  .image-container::after {
+    bottom: -20px;
+    right: -20px;
+  }
+  
